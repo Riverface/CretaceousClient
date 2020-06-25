@@ -11,5 +11,10 @@ namespace CretaceousClient.Controllers
             List<Animal> allAnimals = Animal.GetAnimals();
             return View(allAnimals);
         }
+        public IActionResult Details(int id)
+        {
+        Animal animal = Animal.GetDetails(id);
+        return View(animal);
+        }
     }
 }
