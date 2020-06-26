@@ -1,0 +1,15 @@
+@using CretaceousClient.Models;
+
+@model CretaceousClient.Models.Animal;
+
+
+<h1>Deleting @Model.Name:</h1>
+
+<ul>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(Model => Model.AnimalId)
+
+        <input type="submit" value="Delete"/>
+    }
+</ul>   

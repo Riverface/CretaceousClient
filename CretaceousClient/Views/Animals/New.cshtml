@@ -1,0 +1,25 @@
+@using CretaceousClient.Models;
+
+@model CretaceousClient.Models.Animal;
+
+
+<h1>New Animal:</h1>
+
+@using (Html.BeginForm())
+{ 
+    <ul>
+        <li>@Html.LabelFor( Model => Model.Name): </li>
+        <li>@Html.EditorFor( Model => Model.Name) </li>
+        
+        <li>@Html.LabelFor( Model => Model.Age): </li>
+        <li>@Html.EditorFor( Model => Model.Age) </li>
+        
+        <li>@Html.LabelFor( Model => Model.Species): </li>
+        <li>@Html.EditorFor( Model => Model.Species) </li>
+        
+        <li>@Html.LabelFor( Model => Model.Gender): </li>
+        <li>@Html.EditorFor( Model => Model.Gender) </li>
+
+        <input type="submit" value="Save"/>
+    </ul>   
+}
